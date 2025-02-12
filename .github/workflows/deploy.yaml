@@ -47,6 +47,7 @@ jobs:
 
       - name: "Install R packages"
         run: |
+          sudo Rscript -e 'install.packages(("renv"), repos = "http://cran.r-project.org")'
           sudo Rscript -e 'renv::install(c("yaml", "knitr"), repos = "http://cran.r-project.org")'
 
       - name: "Set up Pandoc"
