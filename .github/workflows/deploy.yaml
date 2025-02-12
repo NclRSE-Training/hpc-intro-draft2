@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo apt-get -qq update
           sudo apt-get -y install r-base
-          sudo Rscript -e 'install.packages(c("yaml", "knitr"), repos = "http://cran.r-project.org")'
+          sudo Rscript -e 'renv::install(c("yaml", "knitr"), repos = "http://cran.r-project.org")'
 
       - name: "Set up R"
         uses: r-lib/actions/setup-r@v2
